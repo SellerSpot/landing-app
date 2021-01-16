@@ -1,4 +1,4 @@
-import styles from './home.module.scss';
+import styles from './Home.module.scss';
 
 const Home = () => {
     const dashBoardSignInUrl = `https://dashboard.sellerspotdev.tech/auth/signin`;
