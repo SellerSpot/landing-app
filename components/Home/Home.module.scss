@@ -70,7 +70,7 @@ $font-size-default-sm: 16px;
                 font-size: $font-size-default;
                 cursor: pointer;
                 padding: 10px 15px;
-                border-radius: 5px;
+                border-radius: 10px;
                 border: 1px solid transparent;
 
                 &:hover {
@@ -93,7 +93,7 @@ $font-size-default-sm: 16px;
                 background-color: $base-color;
                 font-weight: bold;
                 font-size: $font-size-default;
-                border-radius: 5px;
+                border-radius: 10px;
 
                 &:hover {
                     box-shadow: 0 0 5px 0 $highlight-color;
@@ -159,7 +159,7 @@ $font-size-default-sm: 16px;
                 background-color: $base-color;
                 font-weight: bold;
                 font-size: $font-size-secondary;
-                border-radius: 5px;
+                border-radius: 10px;
 
                 &:hover {
                     box-shadow: 0 0 5px 0 $highlight-color;
