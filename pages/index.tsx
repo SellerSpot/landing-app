@@ -1,15 +1,15 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import Head from 'next/head';
+import styles from '../styles/App.module.scss';
+import Home from '../components/Home/Home';
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>SellerSpot</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>Sellerspot landing app!</main>
-    </div>
-  );
+export default function App() {
+    return (
+        <div className={styles.appWrapper}>
+            <Head>
+                <title>SellerSpot</title>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <Home />
+        </div>
+    );
 }
