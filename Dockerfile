@@ -29,6 +29,8 @@ ENV NODE_ENV=production
 COPY --from=dependencies /app/node_modules ./node_modules
 # copy public folder from build stage
 COPY --from=build /app/public ./public
+# for fail safe on multi stage builds
+RUN true
 # copy .next folder from build stage
 COPY --from=build /app/.next ./.next
 # expose port
