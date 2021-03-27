@@ -2,6 +2,7 @@ $base-color: #ff9800;
 $background-white-color: #ffffff;
 $forground-light-gray: #adb6ba;
 $highlight-color: #adb6ba;
+
 $font-size-primary: 40px;
 $font-size-primary-sm: 30px;
 $font-size-secondary: 22px;
@@ -16,10 +17,16 @@ $font-size-default-sm: 16px;
 .homeWrapper {
     width: 100%;
     height: 100%;
+    min-width: 100%;
+    min-height: 800px;
+    overflow: auto;
+    overflow-x: hidden;
     background-color: $background-white-color;
     padding: 0px 150px;
     position: relative;
-    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    box-sizing: border-box;
 
     @media only screen and (max-width: 1200px) {
         padding: 0px 100px;
@@ -107,88 +114,85 @@ $font-size-default-sm: 16px;
         }
     }
 
-    .mainContent {
-        width: 50%;
-        height: auto;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-direction: column;
-        gap: 35px;
-        margin-top: 150px;
-        position: relative;
-        z-index: 1;
+    .mainContentWrapper {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 60% 1fr;
+        justify-content: space-between;
 
-        @media only screen and (max-width: 1200px) {
-            width: 80%;
+        @media only screen and (max-width: 1000px) {
+            grid-template-columns: 100%;
         }
 
-        @media only screen and (max-width: 1200px) {
+        .mainContent {
             width: 100%;
-        }
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            position: relative;
+            gap: 20px;
+            margin-top: 150px;
 
-        .mainSlogan {
-            font-size: $font-size-primary;
-            color: $base-color;
-            font-weight: bold;
-            line-height: 60px;
-
-            @media only screen and (max-width: 800px) {
-                font-size: $font-size-primary-sm;
-                line-height: 50px;
-            }
-        }
-
-        .subSlogan {
-            font-size: $font-size-default;
-            color: $forground-light-gray;
-            line-height: 30px;
-
-            @media only screen and (max-width: 800px) {
-                font-size: $font-size-default-sm;
-            }
-        }
-
-        .mainCallToActionHolder {
-            .buttonSolid {
-                padding: 15px 20px;
-                outline: none;
-                border: none;
-                cursor: pointer;
-                color: $background-white-color;
-                background-color: $base-color;
+            .mainSlogan {
+                font-size: $font-size-primary;
+                color: $base-color;
                 font-weight: bold;
-                font-size: $font-size-secondary;
-                border-radius: 10px;
-
-                &:hover {
-                    box-shadow: 0 0 5px 0 $highlight-color;
-                }
+                line-height: 60px;
 
                 @media only screen and (max-width: 800px) {
-                    font-size: $font-size-secondary-sm;
+                    font-size: $font-size-primary-sm;
+                    line-height: 50px;
+                }
+            }
+
+            .subSlogan {
+                font-size: $font-size-default;
+                color: $forground-light-gray;
+                line-height: 30px;
+
+                @media only screen and (max-width: 800px) {
+                    font-size: $font-size-default-sm;
+                }
+            }
+
+            .mainCallToActionHolder {
+                .buttonSolid {
+                    padding: 15px 20px;
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+                    color: $background-white-color;
+                    background-color: $base-color;
+                    font-weight: bold;
+                    font-size: $font-size-secondary;
+                    border-radius: 10px;
+
+                    &:hover {
+                        box-shadow: 0 0 5px 0 $highlight-color;
+                    }
+
+                    @media only screen and (max-width: 800px) {
+                        font-size: $font-size-secondary-sm;
+                    }
                 }
             }
         }
-    }
 
-    .illustrationHolder {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        z-index: 0;
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        @media only screen and (max-width: 800px) {
-            display: none;
-        }
+        .illustrationHolder {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media only screen and (max-width: 1000px) {
+                display: none;
+            }
 
-        img {
-            width: auto;
-            height: auto;
-            @media only screen and (max-width: 1200px) {
-                width: 50%;
+            img {
+                width: auto;
+                height: auto;
             }
         }
     }

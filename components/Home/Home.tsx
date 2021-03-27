@@ -27,27 +27,30 @@ const Home = () => {
                     </button>
                 </div>
             </div>
-            <div className={styles.mainContent}>
-                <div className={styles.mainSlogan}>
-                    Hassle-free End to End <br />
-                    Retail Eco-System <br />
-                    in One Place.
+
+            <div className={styles.mainContentWrapper}>
+                <div className={styles.mainContent}>
+                    <div className={styles.mainSlogan}>
+                        Hassle-free End to End <br />
+                        Retail Eco-System <br />
+                        in One Place.
+                    </div>
+                    <div className={styles.subSlogan}>
+                        From Inventory Management, Accounting, Invoicing <br />
+                        to End to End Delivery in One Single platform.
+                    </div>
+                    <div className={styles.mainCallToActionHolder}>
+                        <button
+                            className={styles.buttonSolid}
+                            onClick={() => launchUrl(dashBoardSignUpUrl)}
+                        >
+                            Create Your Free Account Today
+                        </button>
+                    </div>
                 </div>
-                <div className={styles.subSlogan}>
-                    From Inventory Management, Accounting, Invoicing <br />
-                    to End to End Delivery in One Single platform.
+                <div className={styles.illustrationHolder}>
+                    <img src="/images/storeImage.png" alt="" />
                 </div>
-                <div className={styles.mainCallToActionHolder}>
-                    <button
-                        className={styles.buttonSolid}
-                        onClick={() => launchUrl(dashBoardSignUpUrl)}
-                    >
-                        Create Your Free Account Today
-                    </button>
-                </div>
-            </div>
-            <div className={styles.illustrationHolder}>
-                <img src="/images/storeImage.png" alt="" />
             </div>
         </div>
     );
