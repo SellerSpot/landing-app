@@ -17,13 +17,13 @@ const Home = () => {
                         className={styles.buttonLink}
                         onClick={() => launchUrl(dashBoardSignInUrl)}
                     >
-                        Sigin In
+                        Sign in
                     </button>
                     <button
                         className={styles.buttonSolid}
                         onClick={() => launchUrl(dashBoardSignUpUrl)}
                     >
-                        Sign Up
+                        Sign up
                     </button>
                 </div>
             </div>
@@ -44,7 +44,7 @@ const Home = () => {
                             className={styles.buttonSolid}
                             onClick={() => launchUrl(dashBoardSignUpUrl)}
                         >
-                            Create Your Free Account Today
+                            Create your free store today
                         </button>
                     </div>
                 </div>
